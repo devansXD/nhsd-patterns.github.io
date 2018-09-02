@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="stylesheet" href="stylesheets/nhsuk.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="debugs">
+  <div class="grid-wrapper">
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Breadcrumb</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column">
+          {{ breadcrumb() }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Search strip</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column">
+          {{ searchStrip() }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--one-third page-block page-block--sidebar sticky sticky--top"">
+        </div>
+        
+        <div class="column column--two-thirds">
+          <h2>Top tasks</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column">
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Call To Action</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-half">
+          {{ cta("This is a call to action item", "Compellingly develop covalent core competencies and reliable imperatives. Monotonectally customize user-centric convergence and business action items.") }}
+        </div>
+        <div class="column column--one-half">
+          {{ cta("This is another call to action item", "Quickly grow holistic outsourcing and extensive content. Proactively fashion collaborative vortals without principle-centered schemas") }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Buttons</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-quarter">
+          {{ button("Hello world") }}
+        </div>
+      </div>
+    </body>
+    </html>
