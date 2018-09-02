@@ -1,0 +1,85 @@
+{% from 'components/breadcrumb.njk' import breadcrumb %}
+{% from 'components/search-strip.njk' import searchStrip %}
+{% from 'components/cta.njk' import cta %}
+{% from 'components/button.njk' import button %}
+{% from 'components/top-tasks.njk' import topTasks %}
+{% from 'components/page-nav.njk' import pageNav %}
+{% from 'components/page-index.njk' import pageIndex %}
+
+{% extends 'layouts/application.njk' %}
+{% block content %}
+  
+  <div class="grid-wrapper">
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Breadcrumb</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column">
+          {{ breadcrumb() }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Search strip</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column">
+          {{ searchStrip() }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      
+      <div class="grid-row">
+        <div class="column column--one-third page-block page-block--sidebar sticky sticky--top"">
+      
+          {{ pageNav () }}
+        </div>
+        
+        <div class="column column--two-thirds">
+          <h2>Top tasks</h2>
+          {{ topTasks ("Task 1")}}
+        </div>
+      </div>
+
+      <div class="grid-row">
+        
+        <div class="column">
+          {{ pageIndex ("Refine results")}}
+
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Call To Action</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-half">
+          {{ cta("This is a call to action item", "Compellingly develop covalent core competencies and reliable imperatives. Monotonectally customize user-centric convergence and business action items.") }}
+        </div>
+        <div class="column column--one-half">
+          {{ cta("This is another call to action item", "Quickly grow holistic outsourcing and extensive content. Proactively fashion collaborative vortals without principle-centered schemas") }}
+        </div>
+      </div>
+    </div>
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Buttons</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-quarter">
+          {{ button("Hello world") }}
+        </div>
+      </div>
+    {% endblock %}
