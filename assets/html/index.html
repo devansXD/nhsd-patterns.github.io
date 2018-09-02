@@ -1,14 +1,12 @@
-{% from 'components/breadcrumb.njk' import breadcrumb %}
-{% from 'components/search-strip.njk' import searchStrip %}
-{% from 'components/cta.njk' import cta %}
-{% from 'components/button.njk' import button %}
-{% from 'components/top-tasks.njk' import topTasks %}
-{% from 'components/page-nav.njk' import pageNav %}
-{% from 'components/page-index.njk' import pageIndex %}
-
-{% extends 'layouts/application.njk' %}
-{% block content %}
-  
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="stylesheet" href="stylesheets/nhsuk.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="debugs">
   <div class="grid-wrapper">
     <div class="article-section">
       <div class="grid-row">
@@ -35,24 +33,16 @@
       </div>
     </div>
     <div class="article-section">
-      
       <div class="grid-row">
         <div class="column column--one-third page-block page-block--sidebar sticky sticky--top"">
-      
-          {{ pageNav () }}
         </div>
         
         <div class="column column--two-thirds">
           <h2>Top tasks</h2>
-          {{ topTasks ("Task 1")}}
         </div>
       </div>
-
       <div class="grid-row">
-        
         <div class="column">
-          {{ pageIndex ("Refine results")}}
-
         </div>
       </div>
     </div>
@@ -82,4 +72,5 @@
           {{ button("Hello world") }}
         </div>
       </div>
-    {% endblock %}
+    </body>
+    </html>
